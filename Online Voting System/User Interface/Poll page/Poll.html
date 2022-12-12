@@ -17,15 +17,14 @@
                 <div class="headerContent">
                     <div class="headerLogo">
                         <i class="fa-solid fa-scroll"></i>
-                        <a href="/User page/UserMainPage.html" class="headerLogoLink">
+                        <a href="/Online Voting System/User Interface/User page/UserMainPage.html" class="headerLogoLink">
                             PollRoll
                         </a>
                     </div>
                     <div class="headerMenu">
-                        <a href="" class="menuCreate">Create polls</a>
-                        <a href="" class="menuHistory">History</a>
-                        <a href="" class="menuFeedback">Feedback</a>
-                        <a href="" class="menuContact">Contact</a>
+                        <a href="/Online Voting System/User Interface/Login page/LoginPage.html" class="menuCreate">Create polls</a>
+                        <a href="/Online Voting System/User Interface/About/AboutPage.html" class="menuAbout">About us</a>
+                        <a href="https://www.facebook.com/profile.php?id=100030516376278" class="menuContact">Contact</a>
                     </div>
                 </div>
                 <div class="headerSearch">
@@ -46,7 +45,7 @@
                         <div>
                             <button type="button" class="userBox">
                                 <span class="sr-only">Open main menu</span>
-                                <img src="Avatar_1.png" alt="" loading="lazy" class="userImg">
+                                <img src="/Online Voting System/img/HinhNhuLaHuy.png" alt="" loading="lazy" class="userImg">
                                 <span class="userName">Huy Nguyễn Phạm Gia</span>
                                 <span class="adminUser"> Admin </span>
                             </button>
@@ -79,20 +78,57 @@
                                         </svg>
                                     </button>
                                 </div>
-                            </div>
 
-                            <div x-show="showDescription" class="showDescription">
-                                <div>
-                                    <label for="description" class="label">
-                                        Description
-                                        <span class="optional">
-                                            (optional)
-                                        </span>
-                                    </label>
+                                <div class="addDescription" id="addDescriptionID" style="display: block;">
+                                    <button class="addDescriptionButton" type="button" onclick="showDescription()">
+                                        <svg class="h-5 w-5 " xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20" stroke="">
+                                            <path fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        <span class="addDescriptionSpan">Add description</span>
+                                    </button>
                                 </div>
-                                <div class="showDescriptionBox">
-                                    <textarea id="description" name="description" rows="3" class="descriptionText"></textarea>
+                                
+                                <div class="showDescription" id="showDescriptionID" style="display: none;">
+                                    <div>
+                                        <label for="description" class="label">
+                                            Description
+                                            <span class="optional">
+                                                (optional)
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div class="showDescriptionBox">
+                                        <textarea id="description" name="description" rows="3" class="descriptionText"></textarea>
+                                        <div class="hideDescriptionBox">
+                                            <button type="button" class="hideDescriptionButton" onclick="hideDescription()">
+                                                Hide description
+                                            </button>
+                                        </div>
+                                    </div>
                                 </div>
+                                
+                                <script>
+                                    function showDescription() {
+                                        var x = document.getElementById('addDescriptionID');
+                                        var y = document.getElementById('showDescriptionID');
+     
+                                        if (x.style.display == "block") {
+                                            x.style.display = "none";
+                                            y.style.display = "block";
+                                        }
+                                    }
+                                    
+                                    
+                                    function hideDescription() {
+                                        var x = document.getElementById('addDescriptionID');
+                                        var y = document.getElementById('showDescriptionID');
+     
+                                        if (y.style.display == "block") {
+                                            x.style.display = "block";
+                                            y.style.display = "none";
+                                        }
+                                    } 
+                                </script>
                             </div>
 
                             <div class="votingType">
@@ -225,14 +261,97 @@
                                         </div>
                                     </div>
                                 </div>
-                                <button type="button" class="settingButton">
+                                <button type="button" class="settingButton" onclick="showAdvanced()">
                                     <div class="showAdvanced">
                                         <svg class="showAdvancedSvg" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20" stroke="">
-                                            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
-                                        </svg>
+                                            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>                                        </svg>
                                     </div>
                                     <span>Show advanced settings</span>
                                 </button>
+
+                                <div class="showAdvancedSetting" id="showAdvancedSettingID" style="display: none;">
+                                    <div class="showAdvancedSettingBox">
+                                        <div class="advancedSettingLeft">
+                                            <div>
+                                                <div class="setEndDate">
+                                                    <label for="" class="toggle-label">Set end date</label>
+                                                    <div class="switch">
+                                                        <label class="toggle"> 
+                                                            <input class="toggle-checkbox" type="checkbox">
+                                                            <div class="toggle-switch"></div>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="endDate">
+                                                    <div class="endDateShow">
+                                                        <svg class="" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20" stroke="">
+                                                            <path fill-rule="evenodd" d="M7.707 3.293a1 1 0 010 1.414L5.414 7H11a7 7 0 017 7v2a1 1 0 11-2 0v-2a5 5 0 00-5-5H5.414l2.293 2.293a1 1 0 11-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path>   
+                                                        </svg>
+                                                    </div>
+                                                    <div class="widthFull">
+                                                        <input type="datetime-local" placeholder="Select date" class="inputDate">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="allowComment">
+                                                <label for="" class="toggle-label">Allow comments</label>
+                                                <div class="switch">
+                                                    <label class="toggle"> 
+                                                        <input class="toggle-checkbox" type="checkbox">
+                                                        <div class="toggle-switch"></div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="advancedSettingRight">
+                                            <div>
+                                                <div class="widthFull">
+                                                    <div class="resultsVisibility">
+                                                        <label for="results-visibility" class="toggle-label">
+                                                            Results visibility
+                                                        </label>
+                                                        <select id="results-visibility" class="selectVisibility">
+                                                            <option value="always">Always public</option>
+                                                            <option value="after_deadline">Public after end date</option>
+                                                            <option value="after_vote">Public after vote</option>
+                                                            <option value="hidden">Not public</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="widthFullMargin">
+                                                <div class="widthFull">
+                                                    <div class="resultsVisibility">
+                                                        <label for="results-visibility" class="toggle-label">
+                                                            Edit vote permissions
+                                                        </label>
+                                                        <select id="results-visibility" class="selectVisibility">
+                                                            <option value="always">Nobody</option>
+                                                            <option value="after_deadline">Admin</option>
+                                                            <option value="after_vote">Admin & own votes</option>
+                                                            <option value="hidden">Own votes only</option>
+                                                            <option value="hidden">Every body</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+              
+                                <script>
+                                    function showAdvanced() {
+                                        var x = document.getElementById('showAdvancedSettingID');
+     
+                                        if (x.style.display == "none") {
+                                            x.style.display = "block";
+                                        }
+                                        else{
+                                            x.style.display = "none";
+                                        }
+                                    }
+                                </script>
                             </div>
 
                             <div class="pollCreate">

@@ -123,7 +123,7 @@ a.menuCreate{
     display: inline-flex;
 }
 
-a.menuHistory, a.menuFeedback, a.menuContact{
+a.menuAbout, a.menuContact{
     color: #374151;
     font-weight: 400;
     font-size: 0.875rem;

@@ -219,7 +219,7 @@ a.menuCreate{
     display: inline-flex;
 }
 
-a.menuHistory, a.menuFeedback, a.menuContact{
+a.menuAbout, a.menuContact{
     --tw-space-x-reverse: 0;
     margin-right: calc(2rem * var(--tw-space-x-reverse));
     margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
@@ -237,7 +237,8 @@ a.menuHistory, a.menuFeedback, a.menuContact{
     display: inline-flex;
 }
 
-a.menuCreate:hover, a.menuHistory:hover, a.menuFeedback:hover, a.menuContact:hover{
+
+a.menuCreate:hover, a.menuAbout:hover, a.menuContact:hover{
     color: #374151;
     border-color: #d1d5db;
 }
@@ -517,7 +518,7 @@ nav.optionSetting{
     margin-bottom: -1px;
 }
 
-span.settingOptionSpan{
+button.settingOptionSpan{
     color: #4f46e5;
     font-weight: 500;
     font-size: 0.875rem;
@@ -541,7 +542,7 @@ span.settingOptionSpan{
     margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
-div.settingGeneral{
+div.settingGeneral, div.settingPassword, div.settingAccount{
     margin-top: 2.5rem;
 }
 
@@ -597,6 +598,16 @@ dd.profileDd{
     font-size: 0.875rem;
     line-height: 1.25rem;
     grid-column: span 2 / span 2;
+}
+
+dd.passwordDd{
+    display: flex;
+    margin-top: 0px;
+    color: #111827;
+    align-items: center;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    grid-column: span 1 / span 1;
 }
 
 span.profileSpan{
@@ -669,15 +680,150 @@ div.profileDeleteBox{
     border-bottom-width: calc(1px * var(--tw-divide-y-reverse));
 }
 
+div.changePassword, div.changeAccount{
+    gap: 1rem;
+    display: grid;
+    align-items: center;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    border-color: #e5e7eb;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    --tw-divide-y-reverse: 0;
+    border-bottom-width: calc(1px * var(--tw-divide-y-reverse));
+    border-top-width: calc(1px * calc(1 - var(--tw-divide-y-reverse)));
+}
+
+input.inputPassword{
+    width: 100%;
+    flex-grow: 1;
+    display: block;
+    border-width: 1px;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    border-radius: 0.375rem;
+    border-color: #d1d5db;
+    --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+button.setNewPassword{
+    color: #fff;
+    cursor: pointer;
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    border-width: 1px;
+    border-radius: 0.375rem;
+    border-color: transparent;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    border-color: transparent;
+    background-color: #4f46e5;
+}
+
+button.setNewPassword:hover{
+    background-color: #4338ca;
+}
+
+div.connect{
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+}
+
+a.connectButton{
+    color: #111827;
+    cursor: pointer;
+    display: inline-flex;
+    border-color: #d1d5db;
+    background-color: #fff;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.375rem;
+    border-width: 1px;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+}
+
+a.connectButton:hover{
+    background-color: #f9fafb;
+}
+
+svg.connectSvg{
+    color: #9ca3af;
+    width: 1.25rem;
+    height: 1.25rem;
+    display: block;
+}
+
+span.connectSpan{
+    margin-left: 0.5rem;
+}
 
 
+div.avatar{
+    display: flex;
+    align-items: center;
+}
 
+div.avatarBox{
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 9999px;
+    background-color: #e5e7eb;
+}
 
+img.profileAvatar{
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 9999px;
+    max-width: 100%;
+}
 
+div.avatarNameBox{
+    --tw-space-x-reverse: 0;
+    margin-right: calc(0.75rem * var(--tw-space-x-reverse));
+    margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
+}
 
+div.avatarName{
+    font-weight: 500;
+    white-space: nowrap;
+}
 
+span.avatarNameSpan{
+    color: #6b7280;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
 
+div.disconnect{
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
 
+span.disconnect{
+    color: #ef4444;
+    cursor: pointer;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+
+span.disconnect:hover{
+    text-decoration-line: underline;
+}
 
 
 
