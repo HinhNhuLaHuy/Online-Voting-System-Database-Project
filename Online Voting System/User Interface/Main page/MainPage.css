@@ -141,7 +141,7 @@ a.menuAbout, a.menuContact{
     margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
-a.menuCreate:hover, a.menuHistory:hover, a.menuFeedback:hover, a.menuContact:hover{
+a.menuCreate:hover, a.menuAbout:hover, a.menuContact:hover{
     color: #374151;
     border-color: #d1d5db;
 }
